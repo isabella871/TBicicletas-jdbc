@@ -1,0 +1,6 @@
+db\Conexion.class
+main\java\model\Ventas.class
+main\java\repository\VentasRepository.class
+main\java\Main.class
+main\java\model\Bicicletas.class
+main\java\repository\BicisRepository.class
