@@ -131,10 +131,9 @@ public class Main {
                     System.out.print("Ingrese la fecha (yyyy-MM-dd): ");
                     String fecha = scanner.next();
 
-                    
-
-                    Ventas venta = new Ventas(idBici, cantidad, total, fecha);
-                    ventasRepository.agregarVenta(venta);
+                    Ventas aVenta = new Ventas(idBici, cantidad, total, fecha);
+                    aVenta.set
+                    ventasRepository.agregarVenta(aVenta);
                     break;
 
                 case 2:
@@ -147,10 +146,9 @@ public class Main {
                     ventasRepository.eliminarVenta(dVentas);
                     break;
             
-                default: System.out.println(". . . saliendo . . .");
+                default: System.out.println(". . . . saliendo . . . .");
                     break;
             }
-
         }while (vMenu !=4);
         scanner.close();
     }
