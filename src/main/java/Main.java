@@ -1,14 +1,9 @@
-package main.java;
-
-import java.sql.Date;
 import java.util.Scanner;
-import java.sql.Date;
 
-
-import main.java.model.Bicicletas;
-import main.java.model.Ventas;
-import main.java.repository.BicisRepository;
-import main.java.repository.VentasRepository;
+import model.Bicicletas;
+import model.Ventas;
+import repository.BicisRepository;
+import repository.VentasRepository;
 
 public class Main {
     public static void main(String[] args) {
@@ -26,7 +21,7 @@ public class Main {
                     break;
 
                 case 2:
-                    //menuVentas();
+                    menuVentas();
                     break;
             
                 default:
@@ -119,24 +114,25 @@ public class Main {
 
             switch (vMenu) {
                 case 1:
-                    System.out.println("- - - - - - Agregar datos - - - - - - \n Ingrese el id de la bicicleta: ");
+                    System.out.print("- - - - - - Agregar datos - - - - - - \n Ingrese el id de la bicicleta: ");
                     Integer idBici = scanner.nextInt();
 
                     System.out.print("Ingrese la cantidad: ");
-                    Integer cantidad =scanner.nextInt();
-
-                    System.out.print("Ingrese el total: ");
-                    Integer total = scanner.nextInt();
+                    Integer cantidad = scanner.nextInt();
 
                     System.out.print("Ingrese la fecha (yyyy-MM-dd): ");
                     String fecha = scanner.next();
 
-                    Ventas aVenta = new Ventas(idBici, cantidad, total, fecha);
-                    aVenta.set
+                    Ventas aVenta = new Ventas(idBici, cantidad, fecha);
                     ventasRepository.agregarVenta(aVenta);
                     break;
 
-                case 2:
+                case 2: 
+                    System.out.println("- - - - - - - LISTA DE VENTAS - - - - - -");
+                    ventasRepository.listarVentas();
+                    break;
+
+                case 3:
                     System.out.println("\n ------ ELIMINAR DATOS ------");
                     System.out.print("Ingrese el id: ");
                     Integer idventa = scanner.nextInt();

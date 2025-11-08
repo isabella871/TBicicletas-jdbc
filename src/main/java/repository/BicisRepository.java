@@ -1,11 +1,11 @@
-package main.java.repository;
+package repository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import main.java.model.Bicicletas;
 import db.Conexion;
+import model.Bicicletas;
 
 public class BicisRepository {
     

@@ -1,15 +1,13 @@
-package main.java.model;
-
-import java.sql.Date;
+package model;
 
 public class Ventas {
     private Integer id;
     private Integer idBici;
     private Integer cantidad;
     private Integer total;
-    private Date fecha;
+    private String fecha;
 
-    public Ventas(Integer id, Integer idBici, Integer cantidad, Integer total, Date fecha){
+    public Ventas(Integer id, Integer idBici, Integer cantidad, Integer total, String fecha){
         this.id = id;
         this.idBici = idBici;
         this.cantidad = cantidad;
@@ -17,10 +15,9 @@ public class Ventas {
         this.fecha = fecha;
     }
 
-    public Ventas(Integer idBici, Integer cantidad, Integer total, Date fecha){
+    public Ventas(Integer idBici, Integer cantidad, String fecha){
         this.idBici = idBici;
         this.cantidad = cantidad;
-        this.total = total;
         this.fecha = fecha;
     }
 
@@ -61,11 +58,11 @@ public class Ventas {
         this.total = total;
     }
 
-    public Date getFecha(){
+    public String getFecha(){
         return fecha;
     }
 
-    public void setFecha(Date fecha){
+    public void setFecha(String fecha){
         this.fecha = fecha;
     }
 }
